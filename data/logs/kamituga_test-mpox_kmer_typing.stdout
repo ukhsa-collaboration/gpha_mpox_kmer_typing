@@ -1,0 +1,4 @@
+[2024-11-18 16:02:18,639] INFO: Starting mpox kmer typing. Args received: Namespace(type='fasta', input='/home/phe.gov.uk/michael.d.brown/PycharmProjects/development/mpox_kmer_typing/data/kamituga_test.fna', output='/home/phe.gov.uk/michael.d.brown/PycharmProjects/development/mpox_kmer_typing/data/', refsketch=None)
+[2024-11-18 16:02:18,639] INFO: No reference file specified, using default orthopox reference: data/k31_s1000_orthopox_refs_genomic_renamed.fna.msh
+[2024-11-18 16:02:18,639] INFO: Running kmer typing on input file: /home/phe.gov.uk/michael.d.brown/PycharmProjects/development/mpox_kmer_typing/data/kamituga_test.fna
+[2024-11-18 16:02:18,753] INFO: Mash results file successfully created: /home/phe.gov.uk/michael.d.brown/PycharmProjects/development/mpox_kmer_typing/data/kamituga_test.mash_dist.tsv

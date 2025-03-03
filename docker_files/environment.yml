@@ -1,0 +1,11 @@
+channels:
+- conda-forge
+- bioconda
+dependencies:
+- bioconda::mash=2.3
+- conda-forge::mypy=1.15.0
+- conda-forge::pandas=2.2.3
+- conda-forge::pip=25.0.1
+- conda-forge::plotly=6.0.0
+- conda-forge::pytest=8.3.4
+- conda-forge::ruff=0.9.6

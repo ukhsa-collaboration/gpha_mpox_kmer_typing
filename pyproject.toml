@@ -1,0 +1,57 @@
+[project]
+name = "mpox_kmer_typing"
+version = "0.1.0"
+description = "Determine mpox sequence clade"
+readme = "README.md"
+authors = [
+    {name = "Deborah Greer", email = "deborah.greer@ukhsa.gov.uk"}
+]
+requires-python = ">= 3.11"
+dependencies = [
+    "mash", 
+    "pandas",
+    "plotly"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4.10,<0.5",
+    "pre-commit>=3.7.1,<3.8",
+    "mypy",
+    "pip",
+    "pytest"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+mpox_kmer_typing = "mpox_kmer_typing.mpox_kmer_typing:main"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # comprehensions
+    "C4",
+    # pathlib
+    "PTH",
+]
+ignore = ["E501"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "double"

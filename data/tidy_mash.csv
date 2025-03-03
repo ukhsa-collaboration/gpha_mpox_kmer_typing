@@ -1,0 +1,15 @@
+,Sketch,Sample,Distance,P-Value,Matches,Clade,Proportion Matching Kmers
+1,NC_003310.1_Mpox_virus_CladeI,tests/test_data/kamituga_test.fna,0.00137289,0,920/1000,Mpox_virus_CladeI,0.92
+12,NC_063383.1_Monkeypox_virus_CladeII,tests/test_data/kamituga_test.fna,0.00519571,0,741/1000,Monkeypox_virus_CladeII,0.741
+5,NC_006998.1_Vaccinia_virus,tests/test_data/kamituga_test.fna,0.0249416,0,300/1000,Vaccinia_virus,0.3
+13,NC_066642.1_Horsepox_virus,tests/test_data/kamituga_test.fna,0.0283536,0,262/1000,Horsepox_virus,0.262
+6,NC_008291.1_Taterapox_virus,tests/test_data/kamituga_test.fna,0.0294548,0,251/1000,Taterapox_virus,0.251
+2,NC_003391.1_Camelpox_virus,tests/test_data/kamituga_test.fna,0.0328978,0,220/1000,Camelpox_virus,0.22
+11,NC_055231.1_Orthopoxvirus_Abatino,tests/test_data/kamituga_test.fna,0.0337552,0,213/1000,Orthopoxvirus_Abatino,0.213
+4,NC_004105.1_Ectromelia_virus,tests/test_data/kamituga_test.fna,0.034517,0,207/1000,Ectromelia_virus,0.207
+0,NC_001611.1_Variola_virus,tests/test_data/kamituga_test.fna,0.0346465,0,206/1000,Variola_virus,0.206
+3,NC_003663.2_Cowpox_virus,tests/test_data/kamituga_test.fna,0.0349077,0,204/1000,Cowpox_virus,0.204
+10,NC_055230.1_Akhmeta_virus,tests/test_data/kamituga_test.fna,0.0524748,0,109/1000,Akhmeta_virus,0.109
+7,NC_027213.1_Raccoonpox_virus,tests/test_data/kamituga_test.fna,0.137925,5.16E-79,7/1000,Raccoonpox_virus,0.007
+9,NC_031038.1_Skunkpox_virus_strain_WA,tests/test_data/kamituga_test.fna,0.148715,4.85E-56,5/1000,Skunkpox_virus_strain_WA,0.005
+8,NC_031033.1_Volepox_virus_strain_CA,tests/test_data/kamituga_test.fna,0.148715,4.57E-56,5/1000,Volepox_virus_strain_CA,0.005

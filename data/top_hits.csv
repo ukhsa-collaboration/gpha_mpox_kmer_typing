@@ -1,0 +1,2 @@
+,Sketch,Sample,Distance,P-Value,Matches,Clade,Proportion Matching Kmers
+1,NC_003310.1_Mpox_virus_CladeI,tests/test_data/kamituga_test.fna,0.00137289,0.0,920/1000,Mpox_virus_CladeI,0.92
