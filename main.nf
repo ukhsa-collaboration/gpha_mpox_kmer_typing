@@ -1,3 +1,6 @@
+#!/usr/bin/env nextflow
+// nextflow.enable.dsl=2
+
 include { main } from '../src/mpox_kmer_typing.py'
 
 params.type = "$fasta"
