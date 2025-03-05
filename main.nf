@@ -3,7 +3,7 @@
 
 params.type = "fasta"
 params.input = "$data/kamituga_test.fna"
-params.output = "$data"
+params.output = ""
 params.refsketch = "$data/k31_s1000_orthopox_refs_genomic_renamed.fna.msh"
 
 
