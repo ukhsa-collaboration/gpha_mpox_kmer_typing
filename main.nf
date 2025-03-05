@@ -17,7 +17,7 @@ process mpox {
         refsketch
 
     """
-    python src/mpox_kmer_typing/mpox_kmer_typing.py ${type} ${input}
+    python src/mpox_kmer_typing/mpox_kmer_typing.py ${type} ${input} ${output} ${refsketch}
     """
 
 }
