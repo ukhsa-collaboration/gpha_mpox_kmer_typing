@@ -9,7 +9,7 @@ params.refsketch = "data/k31_s1000_orthopox_refs_genomic_renamed.fna.msh"
 
 process mpox {
     container = "docker_files/Dockerfile"
-    take:
+take:
         type 
         input
         output
