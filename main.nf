@@ -16,6 +16,6 @@ process mpox {
 }
 
 workflow {
-      mpox(type, input, output, refsketch)
+      mpox(params.type, input, output, refsketch)
 
 }
