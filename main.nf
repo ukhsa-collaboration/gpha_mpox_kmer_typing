@@ -1,9 +1,6 @@
 #!/usr/bin/env nextflow
 // nextflow.enable.dsl=2
 
-
-include { mpox_kmer_typing } from './src/mpox_kmer_typing/'
-
 params.type = "$fasta"
 params.input = "$data/kamituga_test.fna"
 params.output = "$data"
@@ -15,7 +12,10 @@ workflow ingest {
         input
         output
         refsketch
-    main:
-        mpox_kmer_typing(type, input, output, refsketch)
+    
+    script:
+      """
+      mpox_kmer_typing(type, input, output, refsketch)
+      """
 
 }
