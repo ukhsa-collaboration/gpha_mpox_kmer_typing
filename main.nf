@@ -15,14 +15,7 @@ process mpox {
 
 }
 
-workflow ingest {
-    take:
-        type
-        input
-        output
-        refsketch
-    
-    main:
+workflow {
       mpox(type, input, output, refsketch)
 
 }
