@@ -10,13 +10,18 @@ params.refsketch = "data/k31_s1000_orthopox_refs_genomic_renamed.fna.msh"
 process mpox {
     container = "docker_files/Dockerfile"
 
+    type = "fasta"
+    input = "data/kamituga_test.fna"
+    output = ""
+    refsketch = "data/k31_s1000_orthopox_refs_genomic_renamed.fna.msh"
+    
     """
-    python src/mpox_kmer_typing/mpox_kmer_typing.py
+    python src/mpox_kmer_typing/mpox_kmer_typing.py --type type --input input --output output --refsketch refsketch
     """
 
 }
 
 workflow {
-      mpox(params.type params.input params.output params.refsketch)
+      mpox()
 
 }
