@@ -23,7 +23,7 @@ def get_args():
     parser.add_argument("--output",
                         "-o",
                         type=str,
-                        required=True,
+                        required=False,
                         default=os.getcwd(),
                         help="Output folder for results files")
     parser.add_argument("--refsketch",

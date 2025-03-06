@@ -1,28 +1,22 @@
 #!/usr/bin/env nextflow
 // nextflow.enable.dsl=2
 
+params.type = "fasta"
+params.input = "data/kamituga_test.fna"
+params.output = ""
+params.refsketch = "data/k31_s1000_orthopox_refs_genomic_renamed.fna.msh"
 
-include { mpox_kmer_typing } from './src/mpox_kmer_typing/'
 
-params.type = "$fasta"
-params.input = "$data/kamituga_test.fna"
-params.output = "$data"
-params.refsketch = "$data/k31_s1000_orthopox_refs_genomic_renamed.fna.msh"
+process mpox {
+    container = "docker_files/Dockerfile"
 
-workflow ingest {
-    take:
-        type
-        input
-        output
-        refsketch
-    main:
-        get_params_and_versions(unique_id)
+    """
+    python src/mpox_kmer_typing/mpox_kmer_typing.py
+    """
 
-        preprocess(unique_id)
+}
 
-        classify_and_report(preprocess.out.processed_fastq, preprocess.out.combined_fastq, params.raise_server)
-        extract_all(preprocess.out.processed_fastq, classify_and_report.out.assignments, classify_and_report.out.kreport, classify_and_report.out.taxonomy)
+workflow {
+      mpox(params.type params.input params.output params.refsketch)
 
-    emit:
-        html_report = classify_and_report.out.report
 }
