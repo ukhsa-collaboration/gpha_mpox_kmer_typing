@@ -1,8 +1,4 @@
-#!/usr/bin/env nextflow
-// nextflow.enable.dsl=2
-
-
-include { mpox_kmer_typing } from './src/mpox_kmer_typing/'
+include { main } from '../src/mpox_kmer_typing.py'
 
 params.type = "$fasta"
 params.input = "$data/kamituga_test.fna"
