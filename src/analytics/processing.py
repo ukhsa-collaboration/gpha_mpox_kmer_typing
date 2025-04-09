@@ -2,7 +2,7 @@ import os
 from typing import Type
 import logging
 import analytics.kmer_typing_functions as ktf
-from bio import SeqIO
+from Bio import SeqIO
 
 
 class TypeClass:
