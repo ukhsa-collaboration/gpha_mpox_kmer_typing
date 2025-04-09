@@ -103,6 +103,6 @@ def extract_top_hits(mash_df, outdir: str):
     mash_df.sort_values(by=["Sample", "Proportion Matching Kmers"],
                         ascending=[True, False], inplace=True)
     top_hit_file = mash_df.groupby("Sample", as_index=False).nth[:1]
-    top_hit_file.to_csv(top_hit_file)
+    top_hit_file.to_csv(os.path.join(outdir, "top_hits.csv"))
 
     return top_hit_file

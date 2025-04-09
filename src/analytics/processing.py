@@ -2,6 +2,7 @@ import os
 from typing import Type
 import logging
 import analytics.kmer_typing_functions as ktf
+from Bio import SeqIO
 
 
 class TypeClass:
@@ -28,7 +29,10 @@ def check_input_file(args: [TypeClass], exitcode: int):
 
 
 def process_fastq(args: [TypeClass], exitcode: int):
-    sequence_file = ktf.create_sequence_sketch(args.input)
+    # sequence_file = ktf.create_sequence_sketch(args.input)
+    records = SeqIO.parse(args.input, "fastq")
+    count = SeqIO.write(records, f"{args.input}.fna", "fasta")
+    sequence_file = f"{args.input}.fna"
     try:
         os.path.exists(sequence_file)
         logging.info("Sketch file successfully created: %s", sequence_file)
@@ -41,7 +45,7 @@ def process_fastq(args: [TypeClass], exitcode: int):
 def create_seq_sketch(args: [TypeClass], exitcode: int):
     # Create sequence sketch - specify min copies of kmer to reduce likelihood of errors
     if args.type == "fastq":
-        sequence_file = process_fastq(args, exitcode)
+        sequence_file, exitcode = process_fastq(args, exitcode)
         return sequence_file, exitcode
     # Set fasta as seq file if consensus input:
     elif args.type == "fasta":
