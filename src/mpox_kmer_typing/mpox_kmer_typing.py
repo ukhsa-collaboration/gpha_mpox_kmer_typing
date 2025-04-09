@@ -16,6 +16,8 @@ from mpox_kmer_typing.directories import set_up_log_folder
 from analytics.processing import check_ref_sketch, check_input_file, create_seq_sketch, check_mash_file_status
 from mpox_kmer_typing.commands import get_args
 
+from analytics.kmer_typing_functions import create_sequence_sketch
+
 
 def main():
     """
@@ -38,6 +40,8 @@ def main():
     check_ref_sketch(src, args)
     # Check input file exists
     exitcode = check_input_file(args, exitcode)
+
+    # create_sequence_sketch(args.input)
     # Create sequence sketch - specify min copies of kmer to reduce likelihood of errors
     sequence_file, exitcode = create_seq_sketch(args, exitcode)
     # Run mash dist
@@ -50,7 +54,6 @@ def main():
     pivot_df = ktf.get_clade_difference(mash_df)
     # Extract top hits
     top_hits = ktf.extract_top_hits(mash_df, args.output)
-
     return exitcode
 
 
